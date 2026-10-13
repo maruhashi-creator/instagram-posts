@@ -1,0 +1,8 @@
+{
+  "name": "instagram-auto-post",
+  "private": true,
+  "description": "Instagram MCP によるスケジュール自動投稿",
+  "dependencies": {
+    "@luminarylane/instagram-mcp-server": "1.6.10"
+  }
+}

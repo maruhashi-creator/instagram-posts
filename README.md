@@ -74,12 +74,28 @@ Claude デスクトップアプリのスケジュールタスクで、このフ�
    失敗したら done は実行せず、エラー内容を報告する（次回同じ投稿を再試行する）。
 ```
 
+無人実行で許可確認が止まらないよう、`.claude/settings.json` に次を設定しておく。
+
+```json
+{
+  "enabledMcpjsonServers": ["instagram"],
+  "permissions": {
+    "allow": [
+      "Bash(python scripts/post_queue.py:*)",
+      "PowerShell(python scripts/post_queue.py:*)",
+      "mcp__instagram__ig_publish_photo",
+      "mcp__instagram__ig_publish_carousel"
+    ]
+  }
+}
+```
+
 ## ファイル
 
 | パス | 役割 |
 |---|---|
 | `.mcp.json` | Instagram MCP サーバーの登録（Claude Code / デスクトップの Code タブ用） |
-| `.claude/settings.json` | MCP サーバーの有効化と、自動投稿に必要なツールの実行許可 |
+| `.claude/settings.json` | （各自作成）MCP サーバーの有効化と、自動投稿に必要なツールの実行許可 |
 | `scripts/post_queue.py` | キューの検証・push・投稿済み処理（標準ライブラリのみ） |
 | `posts/queue/` | 投稿待ち |
 | `posts/posted/`, `posts/posted.jsonl` | 投稿済みと履歴 |

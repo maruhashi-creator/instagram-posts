@@ -2,9 +2,9 @@
   "mcpServers": {
     "instagram": {
       "type": "stdio",
-      "command": "C:\Program Files\nodejs\node.exe",
+      "command": "C:/Program Files/nodejs/node.exe",
       "args": [
-        "C:\Users\PC\Documents\04_AI\64_Instagram\node_modules\@luminarylane\instagram-mcp-server\dist\index.js"
+        "C:/Users/PC/Documents/04_AI/64_Instagram/scripts/instagram-mcp.mjs"
       ],
       "env": {
         "INSTAGRAM_ACCESS_TOKEN": "${INSTAGRAM_ACCESS_TOKEN}",

@@ -95,6 +95,7 @@ Claude デスクトップアプリのスケジュールタスクで、このフ�
 | パス | 役割 |
 |---|---|
 | `.mcp.json` | Instagram MCP サーバーの登録（Claude Code / デスクトップの Code タブ用） |
+| `scripts/instagram-mcp.mjs` | MCP サーバーの起動スクリプト（v1.6.10 の `dist/index.js` は Windows で直接起動すると何もせず終了するため、これ経由で起動する） |
 | `.claude/settings.json` | （各自作成）MCP サーバーの有効化と、自動投稿に必要なツールの実行許可 |
 | `scripts/post_queue.py` | キューの検証・push・投稿済み処理（標準ライブラリのみ） |
 | `posts/queue/` | 投稿待ち |
